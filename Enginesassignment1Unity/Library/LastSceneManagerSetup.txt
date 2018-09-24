@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/100584717/Documents/Word Documents University/Game Engine Design/HelloWorldPlugin/HelloWorldPluginUnity/Assets/_Scenes/Main.unity
+- path: Assets/Scenes/Enginesassignment1.unity
   isLoaded: 1
   isActive: 1
