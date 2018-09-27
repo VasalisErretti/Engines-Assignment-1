@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enginesassignment1Unity", "Assembly-CSharp-firstpass.csproj", "{9ECFF652-E218-C48A-E7DF-542C35C6A3F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{9ECFF652-E218-C48A-E7DF-542C35C6A3F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enginesassignment1Unity", "Assembly-CSharp.csproj", "{92138634-9289-9EE0-120A-F9A07C7B3E4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{92138634-9289-9EE0-120A-F9A07C7B3E4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
