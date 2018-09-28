@@ -12,10 +12,10 @@ public class Keybindscript : MonoBehaviour {
     public Text up, down, left, right;
 	// Use this for initialization
 	void Start () {
-        keys.Add("Up",KeyCode.W);
-        keys.Add("Down", KeyCode.S);
-        keys.Add("Left", KeyCode.A);
-        keys.Add("Right", KeyCode.D);
+        keys.Add("Up",(KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Up", "W")));
+        keys.Add("Down", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Down", "S")));
+        keys.Add("Left", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Left", "A")));
+        keys.Add("Right", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Right", "D")));
 
         up.text = keys["Up"].ToString();
         down.text = keys["Down"].ToString();
@@ -70,5 +70,14 @@ public class Keybindscript : MonoBehaviour {
 
       currentKey = clicked;
       currentKey.GetComponent<Image>().color = selected;
+    }
+    public void SaveKeys()
+    {
+        foreach(var key in keys)
+        {
+            PlayerPrefs.SetString(key.Key,key.Value.ToString());
+        }
+
+        PlayerPrefs.Save();
     }
 }
