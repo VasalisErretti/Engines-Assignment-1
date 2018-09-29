@@ -10,8 +10,12 @@ public class Keybindscript : MonoBehaviour {
     private Color32 normal = new Color32(39,171,249,255);
     private Color32 selected = new Color(239,116,36,255);
     public Text up, down, left, right;
+    public Rigidbody rb;
+    private Vector3 speed;
 	// Use this for initialization
 	void Start () {
+        speed.z = 0;
+        speed.x = 0;
         keys.Add("Up",(KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Up", "W")));
         keys.Add("Down", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Down", "S")));
         keys.Add("Left", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Left", "A")));
@@ -28,23 +32,25 @@ public class Keybindscript : MonoBehaviour {
 		if (Input.GetKeyDown(keys["Up"]))
         {
             //Do a move action add this in
+            speed.z= +5 *Time.deltaTime;
 
         }
         if (Input.GetKeyDown(keys["Down"]))
         {
             //Do a move action add this in
-
+            speed.z =-5 * Time.deltaTime;
         }
         if (Input.GetKeyDown(keys["Left"]))
         {
             //Do a move action add this in
-
+            speed.x =-5 * Time.deltaTime;
         }
         if (Input.GetKeyDown(keys["Right"]))
         {
             //Do a move action add this in
-
+            speed.x =+5 * Time.deltaTime;
         }
+        rb.transform.Translate(speed);
     }
 
     void OnGUI()
