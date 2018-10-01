@@ -20,4 +20,10 @@ public class CreateBox : MonoBehaviour
         }
 
     }
+
+    void OnTriggerEnter()
+    {
+        Rigidbody RigidPrefab;
+        RigidPrefab = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation) as Rigidbody;
+    }
 }
